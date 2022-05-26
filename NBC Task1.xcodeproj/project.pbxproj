@@ -16,6 +16,21 @@
 		5E5AB78D283F730200601793 /* NBC_Task1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB78C283F730200601793 /* NBC_Task1Tests.swift */; };
 		5E5AB797283F730200601793 /* NBC_Task1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB796283F730200601793 /* NBC_Task1UITests.swift */; };
 		5E5AB799283F730200601793 /* NBC_Task1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB798283F730200601793 /* NBC_Task1UITestsLaunchTests.swift */; };
+		5E5AB7A7283F7D6400601793 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7A6283F7D6400601793 /* ApiService.swift */; };
+		5E5AB7A9283F7E1500601793 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7A8283F7E1500601793 /* Context.swift */; };
+		5E5AB7AB283FA7C900601793 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */; };
+		5E5AB7B2283FAFFC00601793 /* ArticleCardXLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */; };
+		5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */; };
+		5E5AB7B6283FB3D700601793 /* ArticleCardXLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B5283FB3D700601793 /* ArticleCardXLView.xib */; };
+		5E5AB7B8283FB9BD00601793 /* ArticleCardXLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B7283FB9BD00601793 /* ArticleCardXLView.swift */; };
+		5E5AB7BC283FBED100601793 /* ArticleCardLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7BB283FBED100601793 /* ArticleCardLCell.xib */; };
+		5E5AB7BE283FBF7800601793 /* ArticleCardLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7BD283FBF7800601793 /* ArticleCardLCell.swift */; };
+		5E5AB7C0283FDA5400601793 /* ArticleCardLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7BF283FDA5400601793 /* ArticleCardLView.xib */; };
+		5E5AB7C2283FDAC100601793 /* ArticleCardLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7C1283FDAC100601793 /* ArticleCardLView.swift */; };
+		5E5AB7C7283FECCF00601793 /* ArticleCardMCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7C6283FECCF00601793 /* ArticleCardMCell.xib */; };
+		5E5AB7C9283FED1400601793 /* ArticleCardMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7C8283FED1400601793 /* ArticleCardMCell.swift */; };
+		5E5AB7CB283FEE9D00601793 /* ArticleCardMView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7CA283FEE9D00601793 /* ArticleCardMView.xib */; };
+		5E5AB7CD283FEEC700601793 /* ArticleCardMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7CC283FEEC700601793 /* ArticleCardMView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +64,21 @@
 		5E5AB792283F730200601793 /* NBC Task1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NBC Task1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5AB796283F730200601793 /* NBC_Task1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_Task1UITests.swift; sourceTree = "<group>"; };
 		5E5AB798283F730200601793 /* NBC_Task1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBC_Task1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E5AB7A6283F7D6400601793 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		5E5AB7A8283F7E1500601793 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLCell.xib; sourceTree = "<group>"; };
+		5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardXLCell.swift; sourceTree = "<group>"; };
+		5E5AB7B5283FB3D700601793 /* ArticleCardXLView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLView.xib; sourceTree = "<group>"; };
+		5E5AB7B7283FB9BD00601793 /* ArticleCardXLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardXLView.swift; sourceTree = "<group>"; };
+		5E5AB7BB283FBED100601793 /* ArticleCardLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardLCell.xib; sourceTree = "<group>"; };
+		5E5AB7BD283FBF7800601793 /* ArticleCardLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardLCell.swift; sourceTree = "<group>"; };
+		5E5AB7BF283FDA5400601793 /* ArticleCardLView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardLView.xib; sourceTree = "<group>"; };
+		5E5AB7C1283FDAC100601793 /* ArticleCardLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardLView.swift; sourceTree = "<group>"; };
+		5E5AB7C6283FECCF00601793 /* ArticleCardMCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardMCell.xib; sourceTree = "<group>"; };
+		5E5AB7C8283FED1400601793 /* ArticleCardMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardMCell.swift; sourceTree = "<group>"; };
+		5E5AB7CA283FEE9D00601793 /* ArticleCardMView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardMView.xib; sourceTree = "<group>"; };
+		5E5AB7CC283FEEC700601793 /* ArticleCardMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardMView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +129,16 @@
 		5E5AB774283F72FE00601793 /* NBC Task1 */ = {
 			isa = PBXGroup;
 			children = (
-				5E5AB775283F72FE00601793 /* AppDelegate.swift */,
-				5E5AB777283F72FF00601793 /* SceneDelegate.swift */,
-				5E5AB779283F72FF00601793 /* ViewController.swift */,
+				5E72E7E0283FFD1A00C12BA9 /* Model */,
+				5E72E7DE283FFC9000C12BA9 /* Services */,
+				5E5AB7C5283FEC3700601793 /* Delegate */,
+				5E5AB7A5283F7BEF00601793 /* ArticleCard */,
 				5E5AB77B283F72FF00601793 /* Main.storyboard */,
 				5E5AB77E283F730100601793 /* Assets.xcassets */,
 				5E5AB780283F730100601793 /* LaunchScreen.storyboard */,
 				5E5AB783283F730100601793 /* Info.plist */,
+				5E5AB779283F72FF00601793 /* ViewController.swift */,
+				5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */,
 			);
 			path = "NBC Task1";
 			sourceTree = "<group>";
@@ -125,6 +158,130 @@
 				5E5AB798283F730200601793 /* NBC_Task1UITestsLaunchTests.swift */,
 			);
 			path = "NBC Task1UITests";
+			sourceTree = "<group>";
+		};
+		5E5AB7A5283F7BEF00601793 /* ArticleCard */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7AC283FAF0400601793 /* XL */,
+				5E5AB7AD283FAF1C00601793 /* L */,
+				5E5AB7AE283FAF2300601793 /* M */,
+			);
+			path = ArticleCard;
+			sourceTree = "<group>";
+		};
+		5E5AB7AC283FAF0400601793 /* XL */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7B0283FAF8A00601793 /* Cell */,
+				5E5AB7AF283FAF8200601793 /* View */,
+			);
+			path = XL;
+			sourceTree = "<group>";
+		};
+		5E5AB7AD283FAF1C00601793 /* L */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7BA283FBD0300601793 /* Cell */,
+				5E5AB7B9283FBCFC00601793 /* View */,
+			);
+			path = L;
+			sourceTree = "<group>";
+		};
+		5E5AB7AE283FAF2300601793 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7C4283FEC1F00601793 /* Cell */,
+				5E5AB7C3283FEC1700601793 /* View */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		5E5AB7AF283FAF8200601793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7B5283FB3D700601793 /* ArticleCardXLView.xib */,
+				5E5AB7B7283FB9BD00601793 /* ArticleCardXLView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E5AB7B0283FAF8A00601793 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */,
+				5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E5AB7B9283FBCFC00601793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7BF283FDA5400601793 /* ArticleCardLView.xib */,
+				5E5AB7C1283FDAC100601793 /* ArticleCardLView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E5AB7BA283FBD0300601793 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7BB283FBED100601793 /* ArticleCardLCell.xib */,
+				5E5AB7BD283FBF7800601793 /* ArticleCardLCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E5AB7C3283FEC1700601793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7CA283FEE9D00601793 /* ArticleCardMView.xib */,
+				5E5AB7CC283FEEC700601793 /* ArticleCardMView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E5AB7C4283FEC1F00601793 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7C6283FECCF00601793 /* ArticleCardMCell.xib */,
+				5E5AB7C8283FED1400601793 /* ArticleCardMCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E5AB7C5283FEC3700601793 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB775283F72FE00601793 /* AppDelegate.swift */,
+				5E5AB777283F72FF00601793 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		5E72E7DE283FFC9000C12BA9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7A6283F7D6400601793 /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5E72E7DF283FFCE700C12BA9 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				5E5AB7A8283F7E1500601793 /* Context.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		5E72E7E0283FFD1A00C12BA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E72E7DF283FFCE700C12BA9 /* Context */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +388,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5AB7C7283FECCF00601793 /* ArticleCardMCell.xib in Resources */,
+				5E5AB7CB283FEE9D00601793 /* ArticleCardMView.xib in Resources */,
+				5E5AB7C0283FDA5400601793 /* ArticleCardLView.xib in Resources */,
+				5E5AB7B2283FAFFC00601793 /* ArticleCardXLCell.xib in Resources */,
+				5E5AB7B6283FB3D700601793 /* ArticleCardXLView.xib in Resources */,
 				5E5AB782283F730100601793 /* LaunchScreen.storyboard in Resources */,
 				5E5AB77F283F730100601793 /* Assets.xcassets in Resources */,
 				5E5AB77D283F72FF00601793 /* Main.storyboard in Resources */,
+				5E5AB7BC283FBED100601793 /* ArticleCardLCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +423,16 @@
 			files = (
 				5E5AB77A283F72FF00601793 /* ViewController.swift in Sources */,
 				5E5AB776283F72FE00601793 /* AppDelegate.swift in Sources */,
+				5E5AB7A7283F7D6400601793 /* ApiService.swift in Sources */,
+				5E5AB7A9283F7E1500601793 /* Context.swift in Sources */,
+				5E5AB7C2283FDAC100601793 /* ArticleCardLView.swift in Sources */,
+				5E5AB7AB283FA7C900601793 /* ArticleViewModel.swift in Sources */,
+				5E5AB7C9283FED1400601793 /* ArticleCardMCell.swift in Sources */,
+				5E5AB7CD283FEEC700601793 /* ArticleCardMView.swift in Sources */,
+				5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */,
 				5E5AB778283F72FF00601793 /* SceneDelegate.swift in Sources */,
+				5E5AB7B8283FB9BD00601793 /* ArticleCardXLView.swift in Sources */,
+				5E5AB7BE283FBF7800601793 /* ArticleCardLCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
