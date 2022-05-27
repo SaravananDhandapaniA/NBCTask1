@@ -1,20 +1,16 @@
 //
-//  ArticleCardXLCell.swift
+//  ArticleCardSCell.swift
 //  NBC Task1
 //
-//  Created by Tringapps on 26/05/22.
+//  Created by Tringapps on 27/05/22.
 //
 
 import UIKit
 
-class ArticleCardXLCell: UITableViewCell {
+class ArticleCardSCell: UITableViewCell {
     
- 
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var xlTitleSummary: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var timeStampLabel: UILabel!
+    
+    @IBOutlet weak var kindLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +22,5 @@ class ArticleCardXLCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
