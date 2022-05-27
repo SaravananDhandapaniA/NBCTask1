@@ -30,6 +30,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uN4-L9-iTD" secondAttribute="bottom" id="uM4-oe-ZRb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="uN4-L9-iTD" id="ERN-Ll-TCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

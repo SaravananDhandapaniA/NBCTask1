@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-Bv-dex">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="119"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-fZ-9G7">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sachin" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-fZ-9G7">
                                         <rect key="frame" x="223" y="4" width="120" height="68"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3P-Cq-uqU">
@@ -60,11 +60,9 @@
                                     <constraint firstItem="b5d-Vh-tE4" firstAttribute="top" secondItem="s3P-Cq-uqU" secondAttribute="bottom" constant="7" id="aqI-iV-NAe"/>
                                     <constraint firstItem="b5d-Vh-tE4" firstAttribute="leading" secondItem="MJT-Bv-dex" secondAttribute="leading" id="cbo-fg-cl4"/>
                                     <constraint firstAttribute="bottom" secondItem="s3P-Cq-uqU" secondAttribute="bottom" constant="104" id="iYr-Tt-aOJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="b5d-Vh-tE4" secondAttribute="trailing" constant="136" id="mOA-DC-J5O"/>
                                     <constraint firstItem="dO8-fZ-9G7" firstAttribute="top" secondItem="MJT-Bv-dex" secondAttribute="top" constant="4" id="qeY-Q3-9uJ"/>
                                     <constraint firstAttribute="bottom" secondItem="rvG-kP-Q6f" secondAttribute="bottom" id="sdr-wn-Ir7"/>
                                     <constraint firstItem="rvG-kP-Q6f" firstAttribute="top" secondItem="MJT-Bv-dex" secondAttribute="top" constant="105" id="ulW-GC-goy"/>
-                                    <constraint firstAttribute="trailing" secondItem="s3P-Cq-uqU" secondAttribute="trailing" constant="287" id="wj0-eY-WzH"/>
                                     <constraint firstAttribute="bottom" secondItem="dO8-fZ-9G7" secondAttribute="bottom" constant="47" id="xNB-ZX-73J"/>
                                 </constraints>
                             </view>
@@ -98,6 +96,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Sachin" width="100" height="100"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

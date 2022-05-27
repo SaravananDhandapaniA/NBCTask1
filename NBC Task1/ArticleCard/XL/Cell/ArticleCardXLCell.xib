@@ -47,9 +47,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="5Ce-l9-uzG" secondAttribute="bottom" constant="129" id="0KV-zH-6SE"/>
                                     <constraint firstAttribute="trailing" secondItem="WjB-i1-QT9" secondAttribute="trailing" id="4O4-d8-lp0"/>
-                                    <constraint firstItem="jw4-Mz-Iwq" firstAttribute="top" secondItem="dc6-Wl-K6Z" secondAttribute="top" constant="131" id="4uZ-js-0Nb"/>
                                     <constraint firstAttribute="bottom" secondItem="WjB-i1-QT9" secondAttribute="bottom" constant="23" id="5JD-xp-oyF"/>
                                     <constraint firstItem="WjB-i1-QT9" firstAttribute="top" secondItem="5Ce-l9-uzG" secondAttribute="bottom" constant="10" id="LZ3-v1-wPl"/>
                                     <constraint firstAttribute="trailing" secondItem="5Ce-l9-uzG" secondAttribute="trailing" constant="294" id="N7I-PZ-b4C"/>
