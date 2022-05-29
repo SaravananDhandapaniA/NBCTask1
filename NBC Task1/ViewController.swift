@@ -63,22 +63,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCardXLCell", for: indexPath) as! ArticleCardXLCell
-            return cell
-        }
-        else if (indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 7){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCardMCell", for: indexPath) as! ArticleCardMCell
-            return cell
-        }
-        else if(indexPath.row == 4 || indexPath.row == 9) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCardLCell", for: indexPath) as! ArticleCardLCell
-            return cell
-        }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCardSCell", for: indexPath) as! ArticleCardSCell
-            return cell
-        }
+        let cellType = viewModel.getCellType(indexPath)
+        let cellId : String = viewModel.getCellIdentifier(cellType)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        return cell
     }
     
     

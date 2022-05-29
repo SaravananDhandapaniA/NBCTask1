@@ -12,6 +12,8 @@ class ArticleCardSCell: UITableViewCell {
     
     @IBOutlet weak var kindLabel: UILabel!
     
+    static var cellIdentifier = "ArticleCardSCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

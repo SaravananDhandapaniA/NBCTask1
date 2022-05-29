@@ -10,6 +10,27 @@ import Foundation
 class ArticleViewModel {
     var apiService = ApiService()
     var articleData = Context()
+    
+    let contentOrder: [ContextCardType] = [.xlCard, .mCard ,.mCard, .lCard , .sCard]
+    
+    func getCellType(_ indexPath: IndexPath) -> ContextCardType {
+        let contentCount = contentOrder.count
+        return contentOrder[indexPath.row % contentCount]
+    }
+    func getCellIdentifier(_ cardType: ContextCardType) -> String {
+        switch cardType {
+        case .xlCard:
+            return ArticleCardXLCell.cellIdentifier
+        case .lCard:
+            return ArticleCardLCell.cellIdentifier
+        case .mCard:
+            return ArticleCardMCell.cellIdentifier
+        case .sCard:
+            return ArticleCardSCell.cellIdentifier
+        default: return ArticleCardMCell.cellIdentifier
+        }
+    }
+    
     func fetchArticleData(completion: @escaping () -> Void) {
         apiService.getArticleData { result in
             switch result {
@@ -26,4 +47,6 @@ class ArticleViewModel {
     func numberOfRowsInSection( section: Int) -> Int {
         return (articleData.data?.items.count)!
     }
+    
+    
 }

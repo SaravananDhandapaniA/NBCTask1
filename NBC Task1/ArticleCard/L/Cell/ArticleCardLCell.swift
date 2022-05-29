@@ -17,6 +17,8 @@ class ArticleCardLCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
     
+    static var cellIdentifier = "ArticleCardLCell"
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

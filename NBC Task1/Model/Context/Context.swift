@@ -67,13 +67,20 @@ struct ContextUpdatedDate: Decodable {
     var string: String?
 }
 
-struct ContextAttributesDate: Decodable {
+struct ContextAttributes: Decodable {
     private enum CodingKeys: String, CodingKey {
         case size
         case webLinkout
     }
     var size: String?
     var webLinkout: Bool?
+    
+    var cardType: ContextCardType {
+        guard let size = size else {
+            return .none
+        }
+        return ContextCardType(rawValue: size)
+    }
 }
 
 struct ContextAssets: Decodable {
@@ -199,8 +206,6 @@ struct ContextLeadVideo: Decodable {
 }
 
 
-
-
 protocol ContextBaseItem: Decodable {
     var kind: String? {get}
 }
@@ -217,7 +222,7 @@ protocol ContextItem: ContextBaseItem {
     var uri: String? {get}
     var url: String? {get}
     var path: String? {get}
-    var attributes: ContextAttributesDate? {get}
+    var attributes: ContextAttributes? {get}
     var assets: ContextAssets? {get}
     var categories: [String?]? {get}
     var collections: [String?]? {get}
@@ -282,7 +287,7 @@ struct ContextArticle: Decodable, ContextItem {
     var uri: String?
     var url: String?
     var path: String?
-    var attributes: ContextAttributesDate?
+    var attributes: ContextAttributes?
     var assets: ContextAssets?
     var categories: [String?]?
     var collections: [String?]?
@@ -302,3 +307,139 @@ struct ContextArticle: Decodable, ContextItem {
     var urlParams: String?
 }
 
+//Mark: Context Post
+struct ContextPost: ContextItem {
+    
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case id
+        case uri
+        case dateString
+        case publishedDate
+        case updatedDate
+        case title
+        case subtitle
+        case summary
+        case url
+        case path
+        case urlParams
+        case attributes
+        case assets
+        case featuredImage
+        case categories
+        case collections
+        case tags
+        case byline
+         case primaryCategory
+        case eyebrow
+         case primaryTag
+        case sponsor
+        case leadVideo
+        case smil
+        
+        case originatingMarket
+        case contentSource
+        case nationalized
+        case syndicateID
+        case localID
+        case networkObjectID
+    }
+    
+    var kind: String?
+    var id: Int?
+    var uri: String?
+    var dateString: String?
+    var publishedDate: ContextPublishedDate?
+    var updatedDate: ContextUpdatedDate?
+    var title: String?
+    var subtitle: String?
+    var summary: String?
+    var url: String?
+    var path: String?
+    var urlParams: String?
+    var attributes: ContextAttributes?
+    var assets: ContextAssets?
+    var featuredImage: ContextFeaturedImage?
+    var categories: [String?]?
+    var collections: [String?]?
+    var tags: [String?]?
+    var byline: [ContextByline]?
+    var leadVideo: ContextLeadVideo?
+     var primaryCategory: ContextPrimaryCategory?
+    var eyebrow: ContextEyebrow?
+     var primaryTag: ContextPrimaryTag?
+    var sponsor: contextSponsor?
+    var smil: String?
+    var isSponsoredArticle: Bool {
+        sponsor != nil
+    }
+    
+    var originatingMarket: String?
+    var contentSource: String?
+    var nationalized: Bool?
+    var syndicateID: String?
+    var localID: String?
+    var networkObjectID: String?
+    
+}
+
+
+// MARK: Context Card type
+
+protocol OrganismType {
+    static func getTableViewCellNibs() -> [String]
+    func getTableViewCardCellXIBName() -> String
+    func getReusableTableViewCellID() -> String
+    //func getCardViewXIBName() -> String
+}
+
+
+enum ContextCardType: Equatable, OrganismType {
+    
+    case xlCard
+    case lCard
+    case mCard
+    case sCard
+    case none
+    
+    init(rawValue: String) {
+        switch rawValue {
+        case "XL":
+            self = .xlCard
+        case "L":
+            self = .lCard
+        case "M":
+            self = .mCard
+        case "S":
+            self = .sCard
+        default:
+            self = .none
+        }
+    }
+    
+    static func getTableViewCellNibs() -> [String] {
+        [ContextCardType.xlCard, .lCard , .mCard , .sCard]
+            .map{$0.getTableViewCardCellXIBName()}
+            .filter{ !$0.isEmpty }
+    }
+    
+    func getTableViewCardCellXIBName() -> String {
+        getReusableTableViewCellID()
+    }
+    
+    func getReusableTableViewCellID() -> String {
+        switch self {
+        case .xlCard:
+            return "ArticleCardXLCell"
+        case .lCard:
+            return "ArticleCardLCell"
+        case .mCard:
+            return "ArticleCardMCell"
+        case .sCard:
+            return "ArticleCardSCell"
+        case .none:
+            return ""
+        }
+    }
+    
+}
