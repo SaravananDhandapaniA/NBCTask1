@@ -307,7 +307,7 @@ struct ContextArticle: Decodable, ContextItem {
     var urlParams: String?
 }
 
-//Mark: Context Post
+//MARK: Context Post
 struct ContextPost: ContextItem {
     
     private enum CodingKeys: String, CodingKey {
@@ -330,9 +330,9 @@ struct ContextPost: ContextItem {
         case collections
         case tags
         case byline
-         case primaryCategory
+        case primaryCategory
         case eyebrow
-         case primaryTag
+        case primaryTag
         case sponsor
         case leadVideo
         case smil
@@ -365,9 +365,9 @@ struct ContextPost: ContextItem {
     var tags: [String?]?
     var byline: [ContextByline]?
     var leadVideo: ContextLeadVideo?
-     var primaryCategory: ContextPrimaryCategory?
+    var primaryCategory: ContextPrimaryCategory?
     var eyebrow: ContextEyebrow?
-     var primaryTag: ContextPrimaryTag?
+    var primaryTag: ContextPrimaryTag?
     var sponsor: contextSponsor?
     var smil: String?
     var isSponsoredArticle: Bool {
@@ -384,7 +384,7 @@ struct ContextPost: ContextItem {
 }
 
 
-// MARK: Context Card type
+// MARK: Context Cardtype
 
 protocol OrganismType {
     static func getTableViewCellNibs() -> [String]
@@ -442,4 +442,47 @@ enum ContextCardType: Equatable, OrganismType {
         }
     }
     
+}
+
+// MARK: Context Item Type
+private protocol ContextDiscriminator: Decodable {
+    static var discriminator: ItemDiscriminator {get}
+}
+
+
+enum ItemDiscriminator: String, CodingKey {
+    case kind
+}
+
+enum ContextItemType: String, ContextDiscriminator {
+case module
+case videocarousel = "video-carousel"
+case post
+//case gallery
+case video
+//case header
+//case deescalating
+case advertisement
+//case broadcast
+//case breaking
+//case webview
+case unknown
+
+    static var discriminator: ItemDiscriminator = .kind
+    
+    static func getContextItemType(_ item: ContextBaseItem) -> ContextItemType {
+        guard let kind = item.kind, let itemType = ContextItemType(rawValue: kind) else {
+            return .unknown
+        }
+        return itemType
+    }
+    
+    static func getContextCardType(_ contextItem: ContextBaseItem) -> ContextCardType {
+        switch contextItem {
+        case let contextItem as ContextItem:
+            return contextItem.attributes?.cardType ?? .sCard
+        default:
+            return .sCard
+        }
+    }
 }
