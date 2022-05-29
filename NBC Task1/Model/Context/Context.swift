@@ -240,6 +240,8 @@ protocol ContextItem: ContextBaseItem {
 struct ContextArticle: Decodable, ContextItem {
     
     private enum CodingKeys: String, CodingKey {
+        case id
+        case kind
         case title
         case subtitle
         case summary

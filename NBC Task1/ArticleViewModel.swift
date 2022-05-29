@@ -15,10 +15,15 @@ class ArticleViewModel {
             switch result {
             case .success(let listOfData):
                 self.articleData = listOfData
+                print("Json data:\(self.articleData)")
                 completion()
             case .failure(let error):
                 print("Error in parsing JsonData:\(error)")
             }
         }
+    }
+    
+    func numberOfRowsInSection( section: Int) -> Int {
+        return (articleData.data?.items.count)!
     }
 }
