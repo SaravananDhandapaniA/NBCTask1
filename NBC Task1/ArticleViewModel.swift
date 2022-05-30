@@ -8,7 +8,8 @@
 import Foundation
 
 class ArticleViewModel {
-    var apiService = ApiService()
+    //var apiService = ApiService()
+    var apiManager = APIManager()
     var articleData = Context()
     
     let contentOrder: [ContextCardType] = [.xlCard, .mCard ,.mCard, .lCard , .sCard]
@@ -31,8 +32,20 @@ class ArticleViewModel {
         }
     }
     
-    func fetchArticleData(completion: @escaping () -> Void) {
-        apiService.getArticleData { result in
+//    func fetchArticleData(completion: @escaping () -> Void) {
+//        apiService.getArticleData { result in
+//            switch result {
+//            case .success(let listOfData):
+//                self.articleData = listOfData
+//                print("Json data:\(self.articleData)")
+//                completion()
+//            case .failure(let error):
+//                print("Error in parsing JsonData:\(error)")
+//            }
+//        }
+//    }
+    func fetchDataFromApi(completion: @escaping () -> Void){
+        apiManager.getDataFromApi{ result in
             switch result {
             case .success(let listOfData):
                 self.articleData = listOfData
@@ -46,7 +59,6 @@ class ArticleViewModel {
     
     func numberOfRowsInSection( section: Int) -> Int {
         return (articleData.data?.items.count)!
-    }
-    
+    }  
     
 }

@@ -1,0 +1,6 @@
+framework module Pods_NBC_Task1Tests {
+  umbrella header "Pods-NBC Task1Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

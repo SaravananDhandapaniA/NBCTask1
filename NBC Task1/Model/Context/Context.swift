@@ -155,7 +155,7 @@ struct ContextPrimaryTag: Decodable {
     var uri: String?
 }
 
-struct contextSponsor: Decodable {
+struct ContextSponsor: Decodable {
     private enum CodingKeys: String, CodingKey {
         case itemId = "id"
         case name
@@ -230,7 +230,7 @@ protocol ContextItem: ContextBaseItem {
     var featuredImage: ContextFeaturedImage? {get}
     var primaryCategory: ContextPrimaryCategory? {get}
     var primaryTag: ContextPrimaryTag? { get }
-    var sponsor: contextSponsor? {get}
+    var sponsor: ContextSponsor? {get}
     var tags: [String?]? {get}
     var byline: [ContextByline]? {get}
     var originatingMarket: String? {get}
@@ -295,7 +295,7 @@ struct ContextArticle: Decodable, ContextItem {
     var featuredImage: ContextFeaturedImage?
     var primaryCategory: ContextPrimaryCategory?
     var primaryTag: ContextPrimaryTag?
-    var sponsor: contextSponsor?
+    var sponsor: ContextSponsor?
     var tags: [String?]?
     var byline: [ContextByline]?
     var originatingMarket: String?
@@ -368,7 +368,7 @@ struct ContextPost: ContextItem {
     var primaryCategory: ContextPrimaryCategory?
     var eyebrow: ContextEyebrow?
     var primaryTag: ContextPrimaryTag?
-    var sponsor: contextSponsor?
+    var sponsor: ContextSponsor?
     var smil: String?
     var isSponsoredArticle: Bool {
         sponsor != nil
@@ -383,6 +383,233 @@ struct ContextPost: ContextItem {
     
 }
 
+// MARK: Context Unknown Kind
+
+struct ContextUnknownKind: ContextBaseItem {
+    private enum CodingKeys: String, CodingKey {
+        case kind
+    }
+    var kind: String?
+}
+
+// MARK: Context Video
+
+struct ContextVideo: ContextItem {
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case id = "id"
+        case uri
+        case dateString
+        case publishedDate
+        case updatedDate
+        case title
+        case subtitle
+        case summary
+        case url
+        case path
+        case urlParams
+        case attributes
+        case assets
+        case featuredImage
+        case categories
+        case collections
+        case terms
+        case tags
+        case byline
+        case primaryCategory
+        case eyebrow
+        case primaryTag
+        case sponsor
+        case leadVideo
+        // video related values
+        case dataSource
+        case disablePreroll
+        case fwSSID
+        case length
+        case liveStream
+        case pid
+        case sensitivity
+        case videoID
+        case smil
+        
+        case originatingMarket
+        case contentSource
+        case nationalized
+        case syndicateID
+        case localID
+        case networkObjectID
+    }
+    
+    var kind: String?
+    var id: Int?
+    var uri: String?
+    var dateString: String?
+    var publishedDate: ContextPublishedDate?
+    var updatedDate: ContextUpdatedDate?
+    var title: String?
+    var subtitle: String?
+    var summary: String?
+    var url: String?
+    var path: String?
+    var urlParams: String?
+    var attributes: ContextAttributes?
+    var assets: ContextAssets?
+    var featuredImage: ContextFeaturedImage?
+    var categories: [String?]?
+    var collections: [String?]?
+    var terms: [String?]?
+    var tags: [String?]?
+    var byline: [ContextByline]?
+    var leadVideo: ContextLeadVideo?
+    var primaryCategory: ContextPrimaryCategory?
+    var eyebrow: ContextEyebrow?
+    var primaryTag: ContextPrimaryTag?
+    var sponsor: ContextSponsor?
+    // video related values
+    var dataSource: String?
+    var disablePreroll: Bool?
+    var fwSSID: String?
+    var length: Int?
+    var liveStream: Bool?
+    var pid: String?
+    var sensitivity: String?
+    var videoID: String?
+    var smil: String?
+    var isSponsoredArticle: Bool {
+        sponsor != nil
+    }
+    var videoDuration: String?
+    
+    var originatingMarket: String?
+    var contentSource: String?
+    var nationalized: Bool?
+    var syndicateID: String?
+    var localID: String?
+    var networkObjectID: String?
+}
+
+// MARK: Context Module
+
+private struct TempContextItem: ContextBaseItem {
+    var kind: String?
+}
+
+struct ContextModule: ContextBaseItem {
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case id = "id"
+        case networkObjectID
+        case name
+        case slug
+        case uri
+        case url
+        case attributes
+        case items
+        case sponsor
+    }
+    
+    var kind: String?
+    var id: Int?
+    var networkObjectID: String?
+    var name: String?
+    var slug: String?
+    var uri: String?
+    var url: String?
+    var attributes: ContextAttributes?
+    var sponsor: ContextSponsor?
+    
+    private var items: [TempContextItem?]?
+    var contextItems = [ContextBaseItem]()
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        kind = try? container.decode(String.self, forKey: .kind)
+        id = try? container.decode(Int.self, forKey: .id)
+        networkObjectID = try? container.decode(String.self, forKey: .networkObjectID)
+        name = try? container.decode(String.self, forKey: .name)
+        slug = try? container.decode(String.self, forKey: .slug)
+        uri = try? container.decode(String.self, forKey: .uri)
+        url = try? container.decode(String.self, forKey: .url)
+        attributes = try? container.decode(ContextAttributes.self, forKey: .attributes)
+        sponsor = try? container.decode(ContextSponsor.self, forKey: .sponsor)
+        contextItems = ContextData.parseContextItems(container, .items)
+    }
+    
+    init() {}
+}
+
+// MARK: Context VideoCarousel
+
+struct ContextVideoCarousel: ContextBaseItem {
+    
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case id = "id"
+        case networkObjectID
+        case name
+        case slug
+        case uri
+        case url
+        case attributes
+        case items
+        case sponsor
+    }
+    
+    var kind: String?
+    var id: Int?
+    var networkObjectID: String?
+    var name: String?
+    var slug: String?
+    var uri: String?
+    var url: String?
+    var attributes: ContextAttributes?
+    var sponsor: ContextSponsor?
+    
+    private var items: [TempContextItem?]?
+    var contextItems = [ContextBaseItem]()
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        kind = try? container.decode(String.self, forKey: .kind)
+        id = try? container.decode(Int.self, forKey: .id)
+        networkObjectID = try? container.decode(String.self, forKey: .networkObjectID)
+        name = try? container.decode(String.self, forKey: .name)
+        slug = try? container.decode(String.self, forKey: .slug)
+        uri = try? container.decode(String.self, forKey: .uri)
+        url = try? container.decode(String.self, forKey: .url)
+        attributes = try? container.decode(ContextAttributes.self, forKey: .attributes)
+        sponsor = try? container.decode(ContextSponsor.self, forKey: .sponsor)
+        contextItems = ContextData.parseContextItems(container, .items)
+    }
+    
+    init() {}
+}
+
+// MARK: Context Advertisement
+
+struct ContextAdvertisement: ContextBaseItem {
+    private enum CodingKeys: String, CodingKey {
+        case kind
+        case attributes
+    }
+    
+    var kind: String?
+    var attributes: ContextAdAttributes?
+}
+
+struct ContextAdAttributes: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case height
+        case width
+        case heightIpad = "heightTablet"
+        case widthIpad = "widthTablet"
+    }
+    
+    var height: Int?
+    var width: Int?
+    var heightIpad: Int?
+    var widthIpad: Int?
+}
 
 // MARK: Context Cardtype
 
@@ -449,7 +676,6 @@ private protocol ContextDiscriminator: Decodable {
     static var discriminator: ItemDiscriminator {get}
 }
 
-
 enum ItemDiscriminator: String, CodingKey {
     case kind
 }
@@ -458,14 +684,8 @@ enum ContextItemType: String, ContextDiscriminator {
 case module
 case videocarousel = "video-carousel"
 case post
-//case gallery
 case video
-//case header
-//case deescalating
 case advertisement
-//case broadcast
-//case breaking
-//case webview
 case unknown
 
     static var discriminator: ItemDiscriminator = .kind
@@ -481,8 +701,56 @@ case unknown
         switch contextItem {
         case let contextItem as ContextItem:
             return contextItem.attributes?.cardType ?? .sCard
+        case is ContextVideo:
+            return .sCard
+        case is ContextVideoCarousel:
+            return .sCard
+        case is ContextModule:
+            return .sCard
+        case is ContextAdvertisement:
+            return .sCard
         default:
             return .sCard
         }
+    }
+}
+
+// MARK: ContextData Parser for Context Item
+
+extension ContextData {
+    
+    static func parseContextItems<Key: CodingKey>(_ container: KeyedDecodingContainer<Key>, _ key: Key) -> [ContextBaseItem] {
+        var contextItems = [ContextBaseItem]()
+        var family: ContextItemType?
+        guard var nestedUnKeyedContainer = try? container.nestedUnkeyedContainer(forKey: key) else{
+            return contextItems
+        }
+        var tempContainer = nestedUnKeyedContainer
+        
+        while !nestedUnKeyedContainer.isAtEnd {
+            let typeContainer = try? nestedUnKeyedContainer.nestedContainer(keyedBy: ItemDiscriminator.self)
+            
+            do {
+                family = try typeContainer?.decode(ContextItemType.self, forKey: ContextItemType.discriminator)
+            } catch {
+                family = .unknown
+                print("Failed to receive the kind")
+            }
+            switch family {
+            case .post:
+                contextItems.appendSafely(try? tempContainer.decode(ContextPost.self))
+            case .module:
+                contextItems.appendSafely(try? tempContainer.decode(ContextModule.self))
+            case .video:
+                contextItems.appendSafely(try? tempContainer.decode(ContextVideo.self))
+            case .videocarousel:
+                contextItems.appendSafely(try? tempContainer.decode(ContextVideoCarousel.self))
+            case .advertisement:
+                contextItems.appendSafely(try? tempContainer.decode(ContextAdvertisement.self))
+            default:
+                _ = try? tempContainer.decode(ContextUnknownKind.self)
+            }
+        }
+        return contextItems
     }
 }

@@ -12,6 +12,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel = ArticleViewModel()
+    //var apiManager = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     func loadArticleData(){
-        viewModel.fetchArticleData {
+        viewModel.fetchDataFromApi {
             DispatchQueue.main.async {
                 self.tableView.delegate = self
                 self.tableView.dataSource = self
@@ -31,35 +32,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
         }
     }
-//    func getArticleData() {
-//        let urlString = "https://stage.nbcnewyork.com/apps/mobile/v5/homepage?os=ios"
-//
-//        guard let url = URL(string: urlString) else {return}
-//
-//        URLSession.shared.dataTask(with: url) { data, response, error in
-//            if let error = error {
-//                print(error)
-//                return
-//            }
-//
-//            guard let data = data else {
-//                return
-//            }
-//            do {
-//               let jsonData = try JSONDecoder().decode(Context.self, from: data)
-//                print("Json data:\(jsonData)")
-//            } catch let error {
-//                print("Error in decode:\(error)")
-//            }
-//
-//        }.resume()
-//
-//    }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
+        //return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
