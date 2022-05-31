@@ -19,6 +19,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-SY-zBw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sachin" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-i9-4cT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-Wl-K6Z">
                                 <rect key="frame" x="16" y="155" width="382" height="145"/>
                                 <subviews>
@@ -30,7 +33,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjB-i1-QT9">
                                         <rect key="frame" x="0.0" y="26" width="382" height="96"/>
-                                        <color key="backgroundColor" red="0.76648893959999997" green="0.94666621139999996" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="GwP-5l-jMo"/>
                                         </constraints>
@@ -45,7 +48,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="WjB-i1-QT9" secondAttribute="trailing" id="4O4-d8-lp0"/>
                                     <constraint firstAttribute="bottom" secondItem="WjB-i1-QT9" secondAttribute="bottom" constant="23" id="5JD-xp-oyF"/>
@@ -65,7 +68,11 @@
                         <constraints>
                             <constraint firstItem="dc6-Wl-K6Z" firstAttribute="top" secondItem="zLv-SY-zBw" secondAttribute="top" constant="155" identifier="id6" id="6n5-HH-Dlz"/>
                             <constraint firstAttribute="trailing" secondItem="dc6-Wl-K6Z" secondAttribute="trailing" constant="16" identifier="id1" id="BKo-Mb-alm"/>
+                            <constraint firstItem="OCF-i9-4cT" firstAttribute="top" secondItem="zLv-SY-zBw" secondAttribute="top" id="J0D-W9-LWy"/>
+                            <constraint firstAttribute="trailing" secondItem="OCF-i9-4cT" secondAttribute="trailing" id="JRQ-nU-u4w"/>
+                            <constraint firstItem="OCF-i9-4cT" firstAttribute="leading" secondItem="zLv-SY-zBw" secondAttribute="leading" id="TWn-ga-SKS"/>
                             <constraint firstItem="dc6-Wl-K6Z" firstAttribute="leading" secondItem="zLv-SY-zBw" secondAttribute="leading" constant="16" identifier="id2" id="ULb-qr-LzR"/>
+                            <constraint firstAttribute="bottom" secondItem="OCF-i9-4cT" secondAttribute="bottom" id="dGK-2D-DQs"/>
                             <constraint firstAttribute="bottom" secondItem="dc6-Wl-K6Z" secondAttribute="bottom" constant="16" identifier="id5" id="lM4-NQ-jQi"/>
                         </constraints>
                     </view>
@@ -78,6 +85,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bgImage" destination="OCF-i9-4cT" id="Xvh-FS-XUt"/>
                 <outlet property="bgView" destination="zLv-SY-zBw" id="IjM-M1-urt"/>
                 <outlet property="nameLabel" destination="5Ce-l9-uzG" id="aYD-oX-n81"/>
                 <outlet property="timeStampLabel" destination="jw4-Mz-Iwq" id="e7P-oo-CIr"/>
@@ -88,9 +96,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Sachin" width="100" height="100"/>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

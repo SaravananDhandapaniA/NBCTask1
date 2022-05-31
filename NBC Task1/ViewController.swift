@@ -40,11 +40,35 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellType = viewModel.getCellType(indexPath)
-        let cellId : String = viewModel.getCellIdentifier(cellType)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        return cell
+
+        if viewModel.articleData.data?.items[indexPath.row].kind == "post" {
+            if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "XL" {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardXLCell.cellIdentifier, for: indexPath) as? ArticleCardXLCell else { return UITableViewCell()}
+                return cell
+            } else if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "L" {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardLCell.cellIdentifier, for: indexPath) as? ArticleCardLCell else { return UITableViewCell()}
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardMCell.cellIdentifier, for: indexPath) as? ArticleCardMCell else { return UITableViewCell()}
+                return cell
+            }
+            
+        } else if viewModel.articleData.data?.items[indexPath.row].kind == "video" {
+             if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "XL" {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardXLCell.cellIdentifier, for: indexPath) as? ArticleCardXLCell else { return UITableViewCell()}
+                return cell
+             } else if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "L" {
+                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardLCell.cellIdentifier, for: indexPath) as? ArticleCardLCell else { return UITableViewCell()}
+                 return cell
+             } else {
+                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardMCell.cellIdentifier, for: indexPath) as? ArticleCardMCell else { return UITableViewCell()}
+                 return cell
+             }
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardSCell.cellIdentifier, for: indexPath) as? ArticleCardSCell else { return UITableViewCell()}
+            return cell
+        }
+       
     }
     
     

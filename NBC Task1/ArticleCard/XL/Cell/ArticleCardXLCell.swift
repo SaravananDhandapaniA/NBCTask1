@@ -10,6 +10,7 @@ import UIKit
 class ArticleCardXLCell: UITableViewCell {
     
  
+    @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var xlTitleSummary: UIView!
     @IBOutlet weak var nameLabel: UILabel!
