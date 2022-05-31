@@ -522,21 +522,6 @@ struct ContextModule: ContextBaseItem {
     private var items: [TempContextItem?]?
     var contextItems = [ContextBaseItem]()
     
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        kind = try? container.decode(String.self, forKey: .kind)
-//        id = try? container.decode(Int.self, forKey: .id)
-//        networkObjectID = try? container.decode(String.self, forKey: .networkObjectID)
-//        name = try? container.decode(String.self, forKey: .name)
-//        slug = try? container.decode(String.self, forKey: .slug)
-//        uri = try? container.decode(String.self, forKey: .uri)
-//        url = try? container.decode(String.self, forKey: .url)
-//        attributes = try? container.decode(ContextAttributes.self, forKey: .attributes)
-//        sponsor = try? container.decode(ContextSponsor.self, forKey: .sponsor)
-//     //   contextItems = ContextData.parseContextItems(container, .items)
-//    }
-//
-//    init() {}
 }
 
 // MARK: Context VideoCarousel
@@ -569,21 +554,6 @@ struct ContextVideoCarousel: ContextBaseItem {
     private var items: [TempContextItem?]?
     var contextItems = [ContextBaseItem]()
     
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        kind = try? container.decode(String.self, forKey: .kind)
-//        id = try? container.decode(Int.self, forKey: .id)
-//        networkObjectID = try? container.decode(String.self, forKey: .networkObjectID)
-//        name = try? container.decode(String.self, forKey: .name)
-//        slug = try? container.decode(String.self, forKey: .slug)
-//        uri = try? container.decode(String.self, forKey: .uri)
-//        url = try? container.decode(String.self, forKey: .url)
-//        attributes = try? container.decode(ContextAttributes.self, forKey: .attributes)
-//        sponsor = try? container.decode(ContextSponsor.self, forKey: .sponsor)
-//     //   contextItems = ContextData.parseContextItems(container, .items)
-//    }
-//
-//    init() {}
 }
 
 // MARK: Context Advertisement
@@ -611,141 +581,4 @@ struct ContextAdAttributes: Decodable {
     var heightIpad: Int?
     var widthIpad: Int?
 }
-
-// MARK: Context Cardtype
-
-//protocol OrganismType {
-//    static func getTableViewCellNibs() -> [String]
-//    func getTableViewCardCellXIBName() -> String
-//    func getReusableTableViewCellID() -> String
-//    //func getCardViewXIBName() -> String
-//}
-
-
-//enum ContextCardType: Equatable, OrganismType {
-//
-//    case xlCard
-//    case lCard
-//    case mCard
-//    case sCard
-//    case none
-//
-//    init(rawValue: String) {
-//        switch rawValue {
-//        case "XL":
-//            self = .xlCard
-//        case "L":
-//            self = .lCard
-//        case "M":
-//            self = .mCard
-//        case "S":
-//            self = .sCard
-//        default:
-//            self = .none
-//        }
-//    }
-//
-//    static func getTableViewCellNibs() -> [String] {
-//        [ContextCardType.xlCard, .lCard , .mCard , .sCard]
-//            .map{$0.getTableViewCardCellXIBName()}
-//            .filter{ !$0.isEmpty }
-//    }
-//
-//    func getTableViewCardCellXIBName() -> String {
-//        getReusableTableViewCellID()
-//    }
-//
-//    func getReusableTableViewCellID() -> String {
-//        switch self {
-//        case .xlCard:
-//            return "ArticleCardXLCell"
-//        case .lCard:
-//            return "ArticleCardLCell"
-//        case .mCard:
-//            return "ArticleCardMCell"
-//        case .sCard:
-//            return "ArticleCardSCell"
-//        case .none:
-//            return ""
-//        }
-//    }
-//
-//}
-
-// MARK: Context Item Type
-//private protocol ContextDiscriminator: Decodable {
-//    static var discriminator: ItemDiscriminator {get}
-//}
-//
-//enum ItemDiscriminator: String, CodingKey {
-//    case kind
-//}
-//
-//protocol OrganisumKindType {
-//    static func getKind() -> [String]
-//    func getKindData() -> String
-//    func getReusableKind() -> String
-//}
-
-//enum ContextItemType: String,/*ContextDiscriminator*/ Equatable , OrganisumKindType {
-//case post/*(ContextKindState)*/
-//case videocarousel
-//case module
-//case video
-//case advertisement
-//case unknown
-//
-//   // static var discriminator: ItemDiscriminator = .kind
-//
-//    init(rawValue: String ) {
-//        switch rawValue {
-//        case "post":
-//            self = .post
-//        case "video":
-//            self = .video
-//        case "video-carousel":
-//            self = .videocarousel
-//        case "module":
-//            self = .module
-//        case "advertisement":
-//            self = .advertisement
-//        default:
-//            self = .unknown
-//        }
-//    }
-//
-//    static func getKind() -> [String] {
-//        [ContextItemType.post, .video, .videocarousel , .module , .advertisement , .unknown]
-//            .map{$0.getKindData()}
-//            .filter{ !$0.isEmpty }
-//    }
-//
-//    func getKindData() -> String {
-//        getReusableKind()
-//    }
-//
-//    func getReusableKind() -> String {
-//        switch self {
-//        case .post:
-//            return "post"
-//        case .video:
-//            return "video"
-//        case .videocarousel:
-//            return "videocarousel"
-//        case .module:
-//            return "module"
-//        case .advertisement:
-//            return "advertisement"
-//        case .unknown:
-//            return ".unknown"
-//        }
-//    }
-//}
-//
-//enum ContextKindState: String {
-//    case postXL = "XL"
-//    case postL = "L"
-//    case postM = "M"
-//    case postS = "S"
-//}
 

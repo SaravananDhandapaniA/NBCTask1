@@ -30,10 +30,10 @@ class ArticleCardMCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureDataForM(_ data:ContextItem? , _ image:URL?)
+    func configureDataForM(_ data:ContextItem? , _ image:URL)
     {
-        imageM.af_setImage(withURL: image!)
-        nameLabel.text = data?.eyebrow?.label
+        imageM.af_setImage(withURL: image)
+        nameLabel.text = data?.eyebrow?.label?.uppercased()
         titleLabel.text = data?.title
         timeStampLabel.text = data?.dateString
     }

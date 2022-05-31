@@ -19,14 +19,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     func loadArticleData(){
-        viewModel.fetchDataFromApi {
-            DispatchQueue.main.async {
-                self.tableView.delegate = self
-                self.tableView.dataSource = self
-                self.regitserCellXib()
-                self.tableView.reloadData()
-               
+        viewModel.fetchDataFromApi { result in
+            switch result {
+            case .success(true):
+                DispatchQueue.main.async {
+                    self.tableView.delegate = self
+                    self.tableView.dataSource = self
+                    self.regitserCellXib()
+                    self.tableView.reloadData()
+                }
+            case .success(false):
+                print("Error in fetchDataFromApi")
+            case .failure(let error):
+                print("Error:\(error)")
             }
+            
         }
     }
     func regitserCellXib(){
@@ -41,27 +48,26 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        if viewModel.articleData.data?.items[indexPath.row].kind == "post" {
-            let imageUrl = URL(string: (viewModel.articleData.data?.items[indexPath.row].featuredImage?.large)!)
-            let contextData = viewModel.articleData.data?.items[indexPath.row]
-            if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "XL" {
+        let viewData = viewModel.cellForRowAt(indexPath: indexPath)
+        if viewData?.kind == "post" {
+            guard let imageUrl = URL(string: (viewData?.featuredImage?.large)!) else {return UITableViewCell() }
+            if viewData?.attributes?.size == "XL" {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardXLCell.cellIdentifier, for: indexPath) as? ArticleCardXLCell else { return UITableViewCell()}
-                cell.configureDataForXL(contextData, imageUrl)
+                cell.configureDataForXL(viewData, imageUrl)
                 return cell
-            } else if viewModel.articleData.data?.items[indexPath.row].attributes?.size == "L" {
+            } else if viewData?.attributes?.size == "L" {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardLCell.cellIdentifier, for: indexPath) as? ArticleCardLCell else { return UITableViewCell()}
-                cell.configureDataForL(contextData, imageUrl)
+                cell.configureDataForL(viewData, imageUrl)
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardMCell.cellIdentifier, for: indexPath) as? ArticleCardMCell else { return UITableViewCell()}
-                cell.configureDataForM(contextData, imageUrl)
+                cell.configureDataForM(viewData, imageUrl)
                 return cell
             }
             
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCardSCell.cellIdentifier, for: indexPath) as? ArticleCardSCell else { return UITableViewCell()}
-            cell.configureDataForS(viewModel.articleData.data?.items[indexPath.row])
+            cell.configureDataForS(viewData)
             return cell
         }
        

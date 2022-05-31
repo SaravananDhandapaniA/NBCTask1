@@ -25,33 +25,33 @@
                         <rect key="frame" x="16" y="262" width="382" height="189"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suu-ch-6kp">
-                                <rect key="frame" x="0.0" y="0.0" width="87" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="33" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-1S-gRn">
-                                <rect key="frame" x="0.0" y="22" width="382" height="54"/>
+                                <rect key="frame" x="0.0" y="22" width="382" height="114"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="n9N-bd-r4C"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="n9N-bd-r4C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUt-Um-joE">
-                                <rect key="frame" x="0.0" y="78" width="382" height="80"/>
+                                <rect key="frame" x="0.0" y="138" width="382" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="7N2-p3-AFq"/>
+                                    <constraint firstAttribute="height" constant="20" id="7N2-p3-AFq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EV-Cv-hs1">
-                                <rect key="frame" x="0.0" y="175" width="80" height="14"/>
+                                <rect key="frame" x="0.0" y="175" width="31" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="hqG-1S-gRn" firstAttribute="top" secondItem="Suu-ch-6kp" secondAttribute="bottom" constant="7" id="HRi-m1-p9x"/>
                             <constraint firstAttribute="trailing" secondItem="hqG-1S-gRn" secondAttribute="trailing" id="NVi-jr-4i8"/>
                             <constraint firstItem="Suu-ch-6kp" firstAttribute="top" secondItem="rJJ-Nl-Qhn" secondAttribute="top" id="OzQ-Lu-6X3"/>
-                            <constraint firstAttribute="trailing" secondItem="4EV-Cv-hs1" secondAttribute="trailing" constant="302" id="Smn-tH-56Y"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4EV-Cv-hs1" secondAttribute="trailing" constant="20" id="Smn-tH-56Y"/>
                             <constraint firstItem="hqG-1S-gRn" firstAttribute="leading" secondItem="rJJ-Nl-Qhn" secondAttribute="leading" id="TPR-JX-K96"/>
                             <constraint firstItem="4EV-Cv-hs1" firstAttribute="leading" secondItem="rJJ-Nl-Qhn" secondAttribute="leading" id="WOD-Ac-mjc"/>
                             <constraint firstItem="Suu-ch-6kp" firstAttribute="leading" secondItem="rJJ-Nl-Qhn" secondAttribute="leading" id="cOW-4l-vcN"/>
@@ -72,7 +72,7 @@
                             <constraint firstAttribute="trailing" secondItem="ZUt-Um-joE" secondAttribute="trailing" id="fP9-vS-yEe"/>
                             <constraint firstItem="ZUt-Um-joE" firstAttribute="top" secondItem="hqG-1S-gRn" secondAttribute="bottom" constant="2" id="fuG-VE-tZI"/>
                             <constraint firstAttribute="bottom" secondItem="ZUt-Um-joE" secondAttribute="bottom" constant="31" id="fyn-dO-5vt"/>
-                            <constraint firstAttribute="trailing" secondItem="Suu-ch-6kp" secondAttribute="trailing" constant="295" id="lSR-HU-Utn"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Suu-ch-6kp" secondAttribute="trailing" constant="20" id="lSR-HU-Utn"/>
                             <constraint firstItem="ZUt-Um-joE" firstAttribute="leading" secondItem="rJJ-Nl-Qhn" secondAttribute="leading" id="o1r-IF-07f"/>
                         </constraints>
                     </view>
