@@ -25,4 +25,8 @@ class ArticleCardSCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureDataForS(_ data:ContextItem?){
+        kindLabel.text = data?.kind
+    }
+    
 }

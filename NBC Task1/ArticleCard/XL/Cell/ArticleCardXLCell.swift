@@ -29,5 +29,12 @@ class ArticleCardXLCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureDataForXL(_ data:ContextItem? , _ image: URL?){
+        bgImage.af_setImage(withURL: image!)
+        nameLabel.text = data?.eyebrow?.label
+        titleLabel.text = data?.title
+        timeStampLabel.text = data?.dateString
+    }
 
 }

@@ -31,4 +31,11 @@ class ArticleCardLCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configureDataForL(_ data:ContextItem? , _ image:URL?){
+        imageBanner.af_setImage(withURL: image!)
+        nameLabel.text = data?.eyebrow?.label
+        titleLabel.text = data?.title
+        descriptionLabel.text = data?.subtitle
+        timeStampLabel.text = data?.dateString
+    }
 }
