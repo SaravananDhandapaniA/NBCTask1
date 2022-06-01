@@ -71,9 +71,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MJT-Bv-dex" secondAttribute="bottom" constant="12" id="7kp-Vs-C2k"/>
                             <constraint firstAttribute="trailing" secondItem="MJT-Bv-dex" secondAttribute="trailing" identifier="m5" id="7tM-lP-Qe4"/>
                             <constraint firstItem="MJT-Bv-dex" firstAttribute="leading" secondItem="d51-GJ-Au3" secondAttribute="leading" identifier="m6" id="90F-4u-GKN"/>
-                            <constraint firstAttribute="bottom" secondItem="MJT-Bv-dex" secondAttribute="bottom" constant="12" identifier="m7" id="Vg4-iA-aVe"/>
                             <constraint firstItem="MJT-Bv-dex" firstAttribute="top" secondItem="d51-GJ-Au3" secondAttribute="top" identifier="m8" id="i5S-Bd-zVY"/>
                         </constraints>
                     </view>

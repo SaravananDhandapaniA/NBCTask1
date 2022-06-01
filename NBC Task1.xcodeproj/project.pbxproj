@@ -21,7 +21,6 @@
 		5E5AB7A7283F7D6400601793 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7A6283F7D6400601793 /* ApiService.swift */; };
 		5E5AB7A9283F7E1500601793 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7A8283F7E1500601793 /* Context.swift */; };
 		5E5AB7AB283FA7C900601793 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */; };
-		5E5AB7B2283FAFFC00601793 /* ArticleCardXLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */; };
 		5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */; };
 		5E5AB7BC283FBED100601793 /* ArticleCardLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7BB283FBED100601793 /* ArticleCardLCell.xib */; };
 		5E5AB7C7283FECCF00601793 /* ArticleCardMCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5AB7C6283FECCF00601793 /* ArticleCardMCell.xib */; };
@@ -29,6 +28,7 @@
 		5E6322AF2840D41500FAEEC8 /* ArticleCardSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */; };
 		5E6322B02840D41500FAEEC8 /* ArticleCardSCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */; };
 		5E6322B22840DDD900FAEEC8 /* ArticleCardLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */; };
+		5EACE44928473019007007ED /* ArticleCardXLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EACE44828473019007007ED /* ArticleCardXLCell.xib */; };
 		8A0510C320F83EC425860DCC /* Pods_NBC_Task1_NBC_Task1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF045DB441D1E21FF7B7D4C0 /* Pods_NBC_Task1_NBC_Task1UITests.framework */; };
 		EC10632076CCC5E9BD13948A /* Pods_NBC_Task1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A43F8DE4A1425D10AE7A6A1 /* Pods_NBC_Task1Tests.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +72,6 @@
 		5E5AB7A6283F7D6400601793 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		5E5AB7A8283F7E1500601793 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
-		5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLCell.xib; sourceTree = "<group>"; };
 		5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardXLCell.swift; sourceTree = "<group>"; };
 		5E5AB7BB283FBED100601793 /* ArticleCardLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardLCell.xib; sourceTree = "<group>"; };
 		5E5AB7C6283FECCF00601793 /* ArticleCardMCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardMCell.xib; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardSCell.swift; sourceTree = "<group>"; };
 		5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardSCell.xib; sourceTree = "<group>"; };
 		5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardLCell.swift; sourceTree = "<group>"; };
+		5EACE44828473019007007ED /* ArticleCardXLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLCell.xib; sourceTree = "<group>"; };
 		9279125BAB09ABA4D92390DA /* Pods-NBC Task1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBC Task1Tests.debug.xcconfig"; path = "Target Support Files/Pods-NBC Task1Tests/Pods-NBC Task1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96BBC055C4F88765B1513295 /* Pods-NBC Task1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBC Task1.debug.xcconfig"; path = "Target Support Files/Pods-NBC Task1/Pods-NBC Task1.debug.xcconfig"; sourceTree = "<group>"; };
 		AF045DB441D1E21FF7B7D4C0 /* Pods_NBC_Task1_NBC_Task1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBC_Task1_NBC_Task1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,7 +218,7 @@
 		5E5AB7B0283FAF8A00601793 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5E5AB7B1283FAFFC00601793 /* ArticleCardXLCell.xib */,
+				5EACE44828473019007007ED /* ArticleCardXLCell.xib */,
 				5E5AB7B3283FB1E700601793 /* ArticleCardXLCell.swift */,
 			);
 			path = Cell;
@@ -425,8 +425,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5AB7C7283FECCF00601793 /* ArticleCardMCell.xib in Resources */,
-				5E5AB7B2283FAFFC00601793 /* ArticleCardXLCell.xib in Resources */,
 				5E5AB782283F730100601793 /* LaunchScreen.storyboard in Resources */,
+				5EACE44928473019007007ED /* ArticleCardXLCell.xib in Resources */,
 				5E5AB77F283F730100601793 /* Assets.xcassets in Resources */,
 				5E5AB77D283F72FF00601793 /* Main.storyboard in Resources */,
 				5E6322B02840D41500FAEEC8 /* ArticleCardSCell.xib in Resources */,

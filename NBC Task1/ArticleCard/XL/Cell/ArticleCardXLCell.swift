@@ -9,13 +9,15 @@ import UIKit
 
 class ArticleCardXLCell: UITableViewCell {
     
- 
-    @IBOutlet weak var bgImage: UIImageView!
+  
     @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var xlTitleSummary: UIView!
+    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var summaryView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
+    
     
     static var cellIdentifier = "ArticleCardXLCell"
     
@@ -31,10 +33,11 @@ class ArticleCardXLCell: UITableViewCell {
     }
     
     func configureDataForXL(_ data:ContextItem? , _ image: URL){
-        bgImage.af_setImage(withURL: image)
+        bgImageView.af_setImage(withURL: image)
         nameLabel.text = data?.eyebrow?.label?.uppercased()
         titleLabel.text = data?.title
         timeStampLabel.text = data?.dateString
+        
     }
 
 }

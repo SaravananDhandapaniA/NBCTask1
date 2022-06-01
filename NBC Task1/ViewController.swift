@@ -23,8 +23,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             switch result {
             case .success(true):
                 DispatchQueue.main.async {
-                    self.tableView.delegate = self
                     self.tableView.dataSource = self
+                    self.tableView.delegate = self
                     self.regitserCellXib()
                     self.tableView.reloadData()
                 }
