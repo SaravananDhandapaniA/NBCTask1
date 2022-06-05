@@ -24,7 +24,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-0a-QlB">
                                 <rect key="frame" x="0.0" y="0.0" width="380" height="316.5"/>
-                                <color key="backgroundColor" red="0.11685948542018312" green="0.11665312721022372" blue="0.12974974904397518" alpha="0.68145848962644862" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.12941176470588234" alpha="0.68145848962644862" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="348" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="pYz-Os-5FP" userLabel="titleSummary">
                                 <rect key="frame" x="16" y="180.5" width="348" height="120"/>
@@ -36,12 +36,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H8-bc-pDs">
-                                        <rect key="frame" x="0.0" y="27" width="71.5" height="67"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H8-bc-pDs">
+                                        <rect key="frame" x="0.0" y="27" width="66.5" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="tVA-UG-kPd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -64,7 +64,7 @@
                                     <constraint firstItem="VWN-gy-RPu" firstAttribute="leading" secondItem="pYz-Os-5FP" secondAttribute="leading" id="pGc-Vk-VsM"/>
                                     <constraint firstItem="VWN-gy-RPu" firstAttribute="top" secondItem="5H8-bc-pDs" secondAttribute="bottom" constant="9" id="sJ8-D4-vne"/>
                                     <constraint firstItem="yKu-sJ-JJu" firstAttribute="top" secondItem="pYz-Os-5FP" secondAttribute="top" id="uC2-y7-dMM"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5H8-bc-pDs" secondAttribute="trailing" constant="20" id="xSK-0H-Wqb"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5H8-bc-pDs" secondAttribute="trailing" constant="16" id="xSK-0H-Wqb"/>
                                 </constraints>
                             </view>
                         </subviews>

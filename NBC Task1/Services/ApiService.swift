@@ -37,7 +37,7 @@ import Alamofire
 //}
 
 class APIManager {
-     let apiUrl = "https://stage.nbcnewyork.com/apps/mobile/v5/homepage?os=ios"
+     let apiUrl = "https://stage.nbcdfw.com/apps/mobile/v5/homepage?os=ios"
     static let shared = APIManager()
     
     func getDataFromApi(completion: @escaping (Result<Context, Error>) -> Void){

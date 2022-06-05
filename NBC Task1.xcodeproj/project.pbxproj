@@ -28,6 +28,8 @@
 		5E6322AF2840D41500FAEEC8 /* ArticleCardSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */; };
 		5E6322B02840D41500FAEEC8 /* ArticleCardSCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */; };
 		5E6322B22840DDD900FAEEC8 /* ArticleCardLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */; };
+		5E95D89F284A171F004941B0 /* WartopViewControlleriPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */; };
+		5E95D8A1284A271B004941B0 /* WartopViewControlleriPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */; };
 		5EACE44928473019007007ED /* ArticleCardXLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EACE44828473019007007ED /* ArticleCardXLCell.xib */; };
 		8A0510C320F83EC425860DCC /* Pods_NBC_Task1_NBC_Task1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF045DB441D1E21FF7B7D4C0 /* Pods_NBC_Task1_NBC_Task1UITests.framework */; };
 		EC10632076CCC5E9BD13948A /* Pods_NBC_Task1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A43F8DE4A1425D10AE7A6A1 /* Pods_NBC_Task1Tests.framework */; };
@@ -79,6 +81,8 @@
 		5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardSCell.swift; sourceTree = "<group>"; };
 		5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardSCell.xib; sourceTree = "<group>"; };
 		5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardLCell.swift; sourceTree = "<group>"; };
+		5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WartopViewControlleriPad.storyboard; sourceTree = "<group>"; };
+		5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WartopViewControlleriPad.swift; sourceTree = "<group>"; };
 		5EACE44828473019007007ED /* ArticleCardXLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLCell.xib; sourceTree = "<group>"; };
 		9279125BAB09ABA4D92390DA /* Pods-NBC Task1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBC Task1Tests.debug.xcconfig"; path = "Target Support Files/Pods-NBC Task1Tests/Pods-NBC Task1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96BBC055C4F88765B1513295 /* Pods-NBC Task1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBC Task1.debug.xcconfig"; path = "Target Support Files/Pods-NBC Task1/Pods-NBC Task1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		5E5AB774283F72FE00601793 /* NBC Task1 */ = {
 			isa = PBXGroup;
 			children = (
+				5E95D89C284A127C004941B0 /* Wartop */,
 				5E16CBAD284485C40006A3A4 /* Utilities */,
 				5E72E7E0283FFD1A00C12BA9 /* Model */,
 				5E72E7DE283FFC9000C12BA9 /* Services */,
@@ -292,6 +297,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5E95D89C284A127C004941B0 /* Wartop */ = {
+			isa = PBXGroup;
+			children = (
+				5E95D89D284A128C004941B0 /* iPad */,
+			);
+			path = Wartop;
+			sourceTree = "<group>";
+		};
+		5E95D89D284A128C004941B0 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */,
+				5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
 		C500EC5C71197C5FC5915654 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +450,7 @@
 				5E5AB782283F730100601793 /* LaunchScreen.storyboard in Resources */,
 				5EACE44928473019007007ED /* ArticleCardXLCell.xib in Resources */,
 				5E5AB77F283F730100601793 /* Assets.xcassets in Resources */,
+				5E95D89F284A171F004941B0 /* WartopViewControlleriPad.storyboard in Resources */,
 				5E5AB77D283F72FF00601793 /* Main.storyboard in Resources */,
 				5E6322B02840D41500FAEEC8 /* ArticleCardSCell.xib in Resources */,
 				5E5AB7BC283FBED100601793 /* ArticleCardLCell.xib in Resources */,
@@ -565,6 +588,7 @@
 				5E6322AF2840D41500FAEEC8 /* ArticleCardSCell.swift in Sources */,
 				5E5AB7A9283F7E1500601793 /* Context.swift in Sources */,
 				5E5AB7AB283FA7C900601793 /* ArticleViewModel.swift in Sources */,
+				5E95D8A1284A271B004941B0 /* WartopViewControlleriPad.swift in Sources */,
 				5E5AB7C9283FED1400601793 /* ArticleCardMCell.swift in Sources */,
 				5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */,
 				5E5AB778283F72FF00601793 /* SceneDelegate.swift in Sources */,

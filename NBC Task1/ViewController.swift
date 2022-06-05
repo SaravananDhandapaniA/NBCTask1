@@ -17,6 +17,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         loadArticleData()
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let vc = WartopViewControlleriPad()
+//        self.present(vc, animated: true, completion: nil)
+//    }
 
     func loadArticleData(){
         viewModel.fetchDataFromApi { result in
