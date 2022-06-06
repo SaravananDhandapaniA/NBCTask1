@@ -12,16 +12,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
    
     @IBOutlet weak var tableView: UITableView!
     var viewModel = ArticleViewModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.regitserCellXib()
         loadArticleData()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        let vc = WartopViewControlleriPad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
+//        guard  let vc = storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as? WartopViewControlleriPad else {return}
 //        self.present(vc, animated: true, completion: nil)
-//    }
+        self.present(ViewController.warTopViewController()!, animated: true, completion: nil)
+    }
 
     func loadArticleData(){
         viewModel.fetchDataFromApi { result in
@@ -30,7 +33,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 DispatchQueue.main.async {
                     self.tableView.dataSource = self
                     self.tableView.delegate = self
-                    self.regitserCellXib()
                     self.tableView.reloadData()
                 }
             case .success(false):
@@ -47,6 +49,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.register(UINib.init(nibName: "ArticleCardLCell", bundle: .main), forCellReuseIdentifier: "ArticleCardLCell")
         self.tableView.register(UINib.init(nibName: "ArticleCardSCell", bundle: .main), forCellReuseIdentifier: "ArticleCardSCell")
     }
+    
+    static func warTopViewController() -> WartopViewControlleriPad? {
+         let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
+         return storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as? WartopViewControlleriPad
+     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
@@ -77,10 +84,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
        
     }
-    
-    
 
 }
+
+//extension ViewController {
+//    private func showWartopOniPad(){
+//        let wartop = WartopViewControlleriPad.warTopViewController() ?? WartopViewControlleriPad()
+//
+//        guard let viewController = self.parent as? ViewController else {return}
+//        viewController.present(wartop, animated: true, completion: nil)
+//    }
+//}
 
 extension NSLayoutConstraint {
 

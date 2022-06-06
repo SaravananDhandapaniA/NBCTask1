@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34823B3892107FD4AE53FE0D /* Pods_NBC_Task1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42EE68A76C981D04FF39804 /* Pods_NBC_Task1.framework */; };
 		5E16CBAF284485EA0006A3A4 /* ArrayUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16CBAE284485EA0006A3A4 /* ArrayUtility.swift */; };
+		5E525677284DDFAD00936A03 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525676284DDFAD00936A03 /* Constant.swift */; };
 		5E5AB776283F72FE00601793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB775283F72FE00601793 /* AppDelegate.swift */; };
 		5E5AB778283F72FF00601793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB777283F72FF00601793 /* SceneDelegate.swift */; };
 		5E5AB77A283F72FF00601793 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AB779283F72FF00601793 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		3FC487475E138E2EF1C03608 /* Pods-NBC Task1-NBC Task1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBC Task1-NBC Task1UITests.release.xcconfig"; path = "Target Support Files/Pods-NBC Task1-NBC Task1UITests/Pods-NBC Task1-NBC Task1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A43F8DE4A1425D10AE7A6A1 /* Pods_NBC_Task1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBC_Task1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E16CBAE284485EA0006A3A4 /* ArrayUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayUtility.swift; sourceTree = "<group>"; };
+		5E525676284DDFAD00936A03 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5E5AB772283F72FE00601793 /* NBC Task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBC Task1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5AB775283F72FE00601793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5AB777283F72FF00601793 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				5E5AB783283F730100601793 /* Info.plist */,
 				5E5AB779283F72FF00601793 /* ViewController.swift */,
 				5E5AB7AA283FA7C800601793 /* ArticleViewModel.swift */,
+				5E525676284DDFAD00936A03 /* Constant.swift */,
 			);
 			path = "NBC Task1";
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				5E5AB7AB283FA7C900601793 /* ArticleViewModel.swift in Sources */,
 				5E95D8A1284A271B004941B0 /* WartopViewControlleriPad.swift in Sources */,
 				5E5AB7C9283FED1400601793 /* ArticleCardMCell.swift in Sources */,
+				5E525677284DDFAD00936A03 /* Constant.swift in Sources */,
 				5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */,
 				5E5AB778283F72FF00601793 /* SceneDelegate.swift in Sources */,
 				5E6322B22840DDD900FAEEC8 /* ArticleCardLCell.swift in Sources */,
