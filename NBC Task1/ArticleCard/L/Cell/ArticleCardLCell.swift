@@ -10,7 +10,6 @@ import UIKit
 class ArticleCardLCell: UITableViewCell {
     
     @IBOutlet weak var imageBanner: UIImageView!
-    
     @IBOutlet weak var lTitleSummary: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,17 +17,10 @@ class ArticleCardLCell: UITableViewCell {
     @IBOutlet weak var timeStampLabel: UILabel!
     
     static var cellIdentifier = "ArticleCardLCell"
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func configureDataForL(_ data:ContextItem? , _ image:URL){

@@ -11,6 +11,7 @@ import AlamofireImage
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
     @IBOutlet weak var tableView: UITableView!
+     static var wartopData = Context()
     var viewModel = ArticleViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +21,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
-//        guard  let vc = storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as? WartopViewControlleriPad else {return}
-//        self.present(vc, animated: true, completion: nil)
-        self.present(ViewController.warTopViewController()!, animated: true, completion: nil)
     }
 
     func loadArticleData(){
         viewModel.fetchDataFromApi { result in
             switch result {
-            case .success(true):
+            case .success(let data):
                 DispatchQueue.main.async {
+                    ViewController.wartopData = data
                     self.tableView.dataSource = self
                     self.tableView.delegate = self
                     self.tableView.reloadData()
+                    self.present(ViewController.warTopViewController(), animated: true, completion: nil)
                 }
-            case .success(false):
-                print("Error in fetchDataFromApi")
             case .failure(let error):
                 print("Error:\(error)")
             }
@@ -50,9 +47,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.register(UINib.init(nibName: "ArticleCardSCell", bundle: .main), forCellReuseIdentifier: "ArticleCardSCell")
     }
     
-    static func warTopViewController() -> WartopViewControlleriPad? {
+    static func warTopViewController() -> WartopViewControlleriPad {
          let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
-         return storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as? WartopViewControlleriPad
+         return storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as! WartopViewControlleriPad
      }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

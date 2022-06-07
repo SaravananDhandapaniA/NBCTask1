@@ -29,6 +29,7 @@
 		5E6322AF2840D41500FAEEC8 /* ArticleCardSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */; };
 		5E6322B02840D41500FAEEC8 /* ArticleCardSCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */; };
 		5E6322B22840DDD900FAEEC8 /* ArticleCardLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */; };
+		5E7281AE284F0ED50097B779 /* WartopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7281AD284F0ED50097B779 /* WartopViewModel.swift */; };
 		5E95D89F284A171F004941B0 /* WartopViewControlleriPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */; };
 		5E95D8A1284A271B004941B0 /* WartopViewControlleriPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */; };
 		5EACE44928473019007007ED /* ArticleCardXLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EACE44828473019007007ED /* ArticleCardXLCell.xib */; };
@@ -83,6 +84,7 @@
 		5E6322AD2840D41500FAEEC8 /* ArticleCardSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardSCell.swift; sourceTree = "<group>"; };
 		5E6322AE2840D41500FAEEC8 /* ArticleCardSCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardSCell.xib; sourceTree = "<group>"; };
 		5E6322B12840DDD900FAEEC8 /* ArticleCardLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardLCell.swift; sourceTree = "<group>"; };
+		5E7281AD284F0ED50097B779 /* WartopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WartopViewModel.swift; sourceTree = "<group>"; };
 		5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WartopViewControlleriPad.storyboard; sourceTree = "<group>"; };
 		5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WartopViewControlleriPad.swift; sourceTree = "<group>"; };
 		5EACE44828473019007007ED /* ArticleCardXLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCardXLCell.xib; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				5E95D89E284A171F004941B0 /* WartopViewControlleriPad.storyboard */,
 				5E95D8A0284A271B004941B0 /* WartopViewControlleriPad.swift */,
+				5E7281AD284F0ED50097B779 /* WartopViewModel.swift */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				5E5AB7C9283FED1400601793 /* ArticleCardMCell.swift in Sources */,
 				5E525677284DDFAD00936A03 /* Constant.swift in Sources */,
 				5E5AB7B4283FB1E700601793 /* ArticleCardXLCell.swift in Sources */,
+				5E7281AE284F0ED50097B779 /* WartopViewModel.swift in Sources */,
 				5E5AB778283F72FF00601793 /* SceneDelegate.swift in Sources */,
 				5E6322B22840DDD900FAEEC8 /* ArticleCardLCell.swift in Sources */,
 			);

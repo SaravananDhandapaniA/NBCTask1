@@ -6,35 +6,29 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class WartopViewControlleriPad: UIViewController {
     
     
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
-    
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var wartopImageView: UIImageView!
-    
     @IBOutlet weak var bottomView: UIView!
-    
     @IBOutlet weak var summaryView: UIView!
-    
     @IBOutlet weak var seeFullStoryButton: UIButton!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var timeStampLabel: UILabel!
     
-    
+    var viewModel = WartopViewModel()
     var verticalConstraint: NSLayoutConstraint = NSLayoutConstraint()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSetUP()
+        configureDataForWartop()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,12 +38,7 @@ class WartopViewControlleriPad: UIViewController {
     override public var traitCollection: UITraitCollection {
         return updatedTraitCollection()
     }
-    
-   static func warTopViewController() -> WartopViewControlleriPad? {
-        let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
-        return storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as? WartopViewControlleriPad
-    }
-    
+ 
     private func updatedTraitCollection() -> UITraitCollection {
         if  !Constant.ISLANDSCAPE {
             let current = super.traitCollection
@@ -66,7 +55,6 @@ class WartopViewControlleriPad: UIViewController {
     
     private func initialSetUP() {
         wartopImageView.translatesAutoresizingMaskIntoConstraints =  false
-        
         verticalConstraint = NSLayoutConstraint(item: bottomView as Any,
                                                         attribute: NSLayoutConstraint.Attribute.topMargin,
                                                         relatedBy: NSLayoutConstraint.Relation.equal,
@@ -75,8 +63,15 @@ class WartopViewControlleriPad: UIViewController {
                                                         multiplier: 1, constant: 0)
         
         containerView.layer.cornerRadius = 10
-        
         updateVerticalImageconstrainst()
+    }
+    
+    func configureDataForWartop(){
+        nameLabel.text = viewModel.eyebrow
+        titleLabel.text = viewModel.title
+        descriptionLabel.text = viewModel.description
+        timeStampLabel.text = viewModel.timeStamp
+        wartopImageView.af_setImage(withURL: viewModel.imageUrl!)
     }
     
     @IBAction func closeWartop(_ sender: Any) {

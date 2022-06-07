@@ -18,7 +18,6 @@ class ArticleCardXLCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
     
-    
     static var cellIdentifier = "ArticleCardXLCell"
     
     override func awakeFromNib() {
@@ -26,18 +25,10 @@ class ArticleCardXLCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func configureDataForXL(_ data:ContextItem? , _ image: URL){
         bgImageView.af_setImage(withURL: image)
         nameLabel.text = data?.eyebrow?.label?.uppercased()
         titleLabel.text = data?.title
         timeStampLabel.text = data?.dateString
-        
     }
-
 }
