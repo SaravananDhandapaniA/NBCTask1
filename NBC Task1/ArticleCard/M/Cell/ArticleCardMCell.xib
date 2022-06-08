@@ -111,10 +111,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="cYd-a3-rQV" secondAttribute="bottom" id="9u9-on-6cK"/>
-                    <constraint firstItem="cYd-a3-rQV" firstAttribute="top" secondItem="Hts-pL-dBo" secondAttribute="top" constant="12" id="Fyr-Wp-Iae"/>
-                    <constraint firstAttribute="trailing" secondItem="cYd-a3-rQV" secondAttribute="trailing" constant="16" id="QEw-68-4Vr"/>
-                    <constraint firstItem="cYd-a3-rQV" firstAttribute="leading" secondItem="Hts-pL-dBo" secondAttribute="leading" constant="16" id="wHC-cz-0Hm"/>
+                    <constraint firstAttribute="bottom" secondItem="cYd-a3-rQV" secondAttribute="bottom" identifier="mainView bottom" id="9u9-on-6cK"/>
+                    <constraint firstItem="cYd-a3-rQV" firstAttribute="top" secondItem="Hts-pL-dBo" secondAttribute="top" constant="12" identifier="mainView top" id="Fyr-Wp-Iae"/>
+                    <constraint firstAttribute="trailing" secondItem="cYd-a3-rQV" secondAttribute="trailing" constant="16" identifier="mainView trailing" id="QEw-68-4Vr"/>
+                    <constraint firstItem="cYd-a3-rQV" firstAttribute="leading" secondItem="Hts-pL-dBo" secondAttribute="leading" constant="16" identifier="mainView leading" id="wHC-cz-0Hm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

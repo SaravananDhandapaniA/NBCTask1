@@ -23,11 +23,9 @@ class WartopViewControlleriPad: UIViewController {
     @IBOutlet weak var timeStampLabel: UILabel!
     
     var viewModel = WartopViewModel()
-    var verticalConstraint: NSLayoutConstraint = NSLayoutConstraint()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetUP()
         configureDataForWartop()
     }
     
@@ -53,50 +51,22 @@ class WartopViewControlleriPad: UIViewController {
             return super.traitCollection
     }
     
-    private func initialSetUP() {
-        wartopImageView.translatesAutoresizingMaskIntoConstraints =  false
-        verticalConstraint = NSLayoutConstraint(item: bottomView as Any,
-                                                        attribute: NSLayoutConstraint.Attribute.topMargin,
-                                                        relatedBy: NSLayoutConstraint.Relation.equal,
-                                                        toItem: wartopImageView,
-                                                        attribute: NSLayoutConstraint.Attribute.bottomMargin,
-                                                        multiplier: 1, constant: 0)
-        
-        containerView.layer.cornerRadius = 10
-        updateVerticalImageconstrainst()
-    }
-    
     func configureDataForWartop(){
         nameLabel.text = viewModel.eyebrow
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         timeStampLabel.text = viewModel.timeStamp
-        wartopImageView.af_setImage(withURL: viewModel.imageUrl!)
+        wartopImageView.af_setImage(withURL: viewModel.imageUrl)
     }
     
     @IBAction func closeWartop(_ sender: Any) {
         self.dismiss(animated: true , completion: nil)
     }
+    
+   static func warTopViewController() -> WartopViewControlleriPad {
+        let storyBoard = UIStoryboard(name: String(describing: "WartopViewControlleriPad"), bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: String(describing: "WartopViewControlleriPad")) as! WartopViewControlleriPad
+    }
+    
 }
 
-
-extension WartopViewControlleriPad {
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateVerticalImageconstrainst()
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        updateVerticalImageconstrainst()
-
-    }
-    
-    private func updateVerticalImageconstrainst() {
-        view.removeConstraint(verticalConstraint)
-        if !Constant.ISLANDSCAPE {
-            view.addConstraint(verticalConstraint)
-        }
-    }
-}

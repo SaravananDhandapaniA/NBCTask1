@@ -26,6 +26,16 @@ class WartopViewModel {
         return ViewController.wartopData.data?.items.first?.dateString
     }
     
-    let imageUrl = URL(string: (ViewController.wartopData.data?.items.first?.featuredImage?.large)!)
+    var imageString : String {
+        guard let imageString = ViewController.wartopData.data?.items.first?.featuredImage?.large else {
+            return String()
+        }
+        return imageString
+    }
+    
+    var imageUrl: URL {
+        guard  let imageUrl = URL(string: imageString) else {return URL(fileURLWithPath: imageString)}
+        return imageUrl
+    }
     
 }
